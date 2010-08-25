@@ -10,8 +10,9 @@ process.addListener('uncaughtException', function(err, stack) {
 var LiveStats = require('./lib/livestats');
 
 new LiveStats({
-    port: 8080,
-    geoipServer: {
+    port: 8080
+  , mount: 'faye'
+  , geoipServer: {
         hostname:   'geoip.peepcode.com'
       , port:       80
     }
